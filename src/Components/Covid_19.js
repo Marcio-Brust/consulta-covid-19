@@ -1,46 +1,42 @@
 import React from "react";
-import { Section, Div, P } from "../styles";
+import { Link } from "react-router-dom";
+import { Section, Div, P, H2 } from "../styles";
 
 const Covid_19 = () => {
-  const [covid, setCovid] = React.useState([]);
+  const [consultas, setConsultas] = React.useState([]);
 
   React.useEffect(() => {
     async function consulta(url) {
-      const response = await fetch(url);
-      const json = await response.json();
-      setCovid(json.data);
-      console.log(json);
+      const resposta = await fetch(url);
+      const respostaJson = await resposta.json();
+      setConsultas(respostaJson.data);
     }
     consulta("https://covid19-brazil-api.now.sh/api/report/v1/");
   }, []);
 
   return (
-    <Section>
-      <div>
-        <P>📍 Estado</P>
-        {covid.map((json) => [
-          <Div key={json.uf}>
-            <img
-              key={json.uf}
-              src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${json.uf}.png`}
-              alt="foto"
-            />
-            <P key={json.uid}>{json.uf}</P>
-          </Div>,
-        ])}
-      </div>
-      <div>
-        <P>🚨 Casos</P>
-        {covid.map((json) => (
-          <P key={json.uid}>{json.cases}</P>
-        ))}
-      </div>
-      <div>
-        <P>💀 Mortes</P>
-        {covid.map((json) => (
-          <P key={json.uid}>{json.deaths}</P>
-        ))}
-      </div>
+    <Section className="animeLeft">
+      <Div>
+        <H2>📍 Estado</H2>
+        <H2>🚨 Casos</H2>
+        <H2>💀 Mortes</H2>
+      </Div>
+      {consultas.map((json) => (
+        <Div key={json.uf}>
+          <div>
+            <Link to={`/estado?uf=${json.uf}`}>
+              <img
+                id={json.uf}
+                src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${json.uf}.png`}
+                alt="foto"
+              />
+            </Link>
+            <P>{json.uf}</P>
+          </div>
+          <P>{json.cases}</P>
+          <P>{json.deaths}</P>
+        </Div>
+      ))}
     </Section>
   );
 };
