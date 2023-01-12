@@ -4,12 +4,11 @@
 }
 
 body {
-  padding-top: 4rem;
   margin: 0px;
-  color: #333;
   --type-first: Helvetica, Arial, sans-serif;
   --type-second: "Spectral", georgia;
   font-family: var(--type-first);
+  background: #444;
 }
 
 h1,
