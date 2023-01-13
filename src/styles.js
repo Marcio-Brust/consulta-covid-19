@@ -15,7 +15,6 @@ export const Section = styled.section`
   }
 `;
 
-
 export const Div = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -32,7 +31,6 @@ export const Div = styled.div`
   }
 `;
 
-
 export const DivUf = styled(Div)`
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -48,14 +46,10 @@ export const DivUf = styled(Div)`
   }
 `;
 
-
-
 export const H2 = styled.h2`
   font-family: var(--type-second);
   text-align: start;
 `;
-
-
 
 export const P = styled.p`
   padding: 1rem 2rem;
@@ -75,14 +69,12 @@ export const DivPesquisa = styled.div`
   border-bottom: 2px solid #444;
 `;
 
-
 export const H1Pesquisa = styled.h1`
   margin: 0 auto;
   font-family: var(--type-second);
   font-size: 2rem;
   text-align: center;
 `;
-
 
 export const Input = styled.input`
   margin: 0 auto;
@@ -99,7 +91,6 @@ export const Input = styled.input`
   }
 `;
 
-
 export const Button = styled.button`
   height: 44px;
   width: 44px;
@@ -112,13 +103,6 @@ export const Button = styled.button`
     border: 2px solid rgb(79, 250, 123);
   }
 `;
-
-
-
-
-
-
-
 
 /* https://covid19-brazil-api.now.sh/api/report/v1/
 

@@ -39,6 +39,12 @@ const States = () => {
     }
   }, [uf]);
 
+  const link = document.querySelector("link");
+  link.setAttribute(
+    "href",
+    `https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${uf}.png`
+  );
+
   if (carregando) return <p>Carregando...</p>;
   if (consultas.state === undefined) {
     <p>Carregando...</p>;
