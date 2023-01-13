@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Section, Div, P, H2 } from "../styles";
 import foto from "../assets/img/flag-of-brazil.jpg";
 
-const Covid_19 = () => {
+const Covid19 = () => {
   const [consultas, setConsultas] = React.useState([]);
 
   React.useEffect(() => {
@@ -45,4 +45,4 @@ const Covid_19 = () => {
   );
 };
 
-export default Covid_19;
+export default Covid19;
