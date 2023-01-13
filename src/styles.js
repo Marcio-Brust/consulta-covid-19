@@ -15,6 +15,20 @@ export const Section = styled.section`
   }
 `;
 
+export const DivHome = styled.div`
+  position: absolute;
+  display: flex;
+  background: #fff;
+  margin-left: 560px;
+  margin-top: -30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  background: #222;
+  cursor: pointer;
+`;
+
 export const Div = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -82,6 +96,7 @@ export const Input = styled.input`
   width: 350px;
   height: 40px;
   text-transform: uppercase;
+  border-radius: 0.5rem;
   background: #444;
   padding: 20px 30px;
   border: solid 2px transparent;

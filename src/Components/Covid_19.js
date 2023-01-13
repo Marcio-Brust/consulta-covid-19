@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Section, Div, P, H2 } from "../styles";
+import foto from "../assets/img/flag-of-brazil.jpg";
 
 const Covid_19 = () => {
   const [consultas, setConsultas] = React.useState([]);
@@ -12,7 +13,10 @@ const Covid_19 = () => {
       setConsultas(respostaJson.data);
     }
     consulta("https://covid19-brazil-api.now.sh/api/report/v1/");
-  }, []);
+    document.title = "Consulta Covid-19";
+    const link = document.querySelector("link");
+    link.setAttribute("href", foto);
+  }, [consultas.state]);
 
   return (
     <Section className="animeLeft">

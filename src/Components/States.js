@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Section,
   DivUf,
@@ -7,6 +8,7 @@ import {
   Input,
   H1Pesquisa,
   Button,
+  DivHome,
 } from "../styles";
 
 const States = () => {
@@ -53,6 +55,13 @@ const States = () => {
   }
   return (
     <Section className="animeLeft">
+      <DivHome>
+        {" "}
+        <Link to="/" end>
+          ✖️{" "}
+        </Link>
+      </DivHome>
+
       <H1Pesquisa>Pesquise o estado</H1Pesquisa>
       <DivPesquisa>
         <Input placeholder="UF=RJ" type="text" name="uf" maxLength="2" />
