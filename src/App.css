@@ -4,7 +4,7 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
   --type-first: Helvetica, Arial, sans-serif;
   --type-second: "Spectral", georgia;
   font-family: var(--type-first);
